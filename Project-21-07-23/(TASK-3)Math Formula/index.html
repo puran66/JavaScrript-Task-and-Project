@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Formula</title>
+</head>
+<body>
+    <div>
+        <h2>Math Calculation of => 2a*(a^2+b^2)*2b</h2>
+        <label for="value">Enter value of 'a'</label>
+        <input type="text" id="a" placeholder="Enter Here">
+        <br><br>
+        <label for="value">Enter value of 'b'</label>
+        <input type="text" id="b" placeholder="Enter Here">
+        <br><br>
+        <button onclick="Formula()">Click Here!</button>
+        <h3 id="solution"></h3>
+
+        <script>
+            function Formula(){
+                let a = parseInt(document.getElementById("a").value);
+                let b = parseInt(document.getElementById("b").value);
+                let ans=   2*a*(a^2+b^2)*2*b;
+
+                document.getElementById("solution").innerHTML=`Solution => ${ans}`;
+            }
+        </script>
+    </div>
+</body>
+</html>

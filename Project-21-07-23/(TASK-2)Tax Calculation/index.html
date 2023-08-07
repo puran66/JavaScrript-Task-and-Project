@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+</head>
+<body>
+    <div>
+        <h1>Tax Calculation</h1>
+        <label for="value">Yearly Income:</label>
+        <input type="text" id="value" placeholder="Enter Here " required>
+        <br><br>
+        <button onclick="Tax()">Click Here!</button>
+        <h2 id="tax"></h2>
+        <h2 id="total"></h2>
+    </div>
+
+    <script>
+        function Tax(){
+            let num = parseInt(document.getElementById("value").value);
+            let tax= num/5;
+            let total = num+tax;
+            document.getElementById('tax').innerHTML=`Your tax is ${tax}`;
+            document.getElementById('total').innerHTML=`Your Total Amount is ${total}`;
+        }
+    </script>
+</body>
+</html>

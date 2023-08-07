@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Mesurement</title>
+</head>
+<body>
+    <div>
+        <h1>Height Mesurement</h1>
+        <label for="value">Enter your Height</label>
+        <input type="text" id="a" placeholder="In cm">
+        <br><br>
+        <button onclick="Formula()">Click Here!</button>
+        <h3 id="solution"></h3>
+    </div>
+
+    <script>
+        function Formula(){
+            let a = parseInt(document.getElementById("a").value);
+            
+            if(a>165){
+                document.getElementById("solution").innerHTML=`You are Tall`;
+            }
+            else{
+                document.getElementById("solution").innerHTML=`You are not Tall`;
+            }
+        }
+    </script>
+</body>
+</html>

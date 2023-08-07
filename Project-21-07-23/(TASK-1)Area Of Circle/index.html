@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of circle</title>
+</head>
+
+<body>
+   <div>
+    <h2>Area Of Circle</h2>
+    <input type="text" id="num" placeholder="Enter Number" required>
+    <br><br>
+    <button id="value" onclick="Circle()">ANSWER</button>
+    <h3 id="ans"></h3>
+   </div>
+
+   <script>
+    function Circle(){
+        let Num= document.getElementById("num").value;
+        let ans = Num*Num*3.14;
+
+        document.getElementById("ans").innerHTML=ans;
+    }
+   </script>
+</body>
+
+</html>
