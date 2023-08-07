@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Write a JavaScript program to add two number of addition, subtraction, multiplication, division (using simple function</title>
+</head>
+<body>
+    <center>
+        <h2>add two number of addition, subtraction, multiplication, division</h2>
+        <label for="text">Enter First Number :</label>
+        <input type="number" id="num1" placeholder="Enter Here" />
+        <br><br>
+
+        <label for="text">Enter Second Number :</label>
+        <input type="number" id="num2" placeholder="Enter Here" />
+        <br><br>
+
+        <button onclick="addition()">Click For addition</button>
+        <button onclick="subtraction()">Click For subtraction</button>
+        <button onclick="multiplication()">Click For multiplication</button>
+        <button onclick="division()">Click For division</button>
+
+        <h3 id="ans"></h3>
+    </center>
+
+    <script>
+        function addition() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            sum = num1+num2;
+
+            document.getElementById('ans').innerHTML=`Your answer is =>` +sum;
+        }
+        function subtraction() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            sum = num1-num2;
+
+            document.getElementById('ans').innerHTML=`Your answer is =>` +sum;
+        }
+        function multiplication() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            sum = num1*num2;
+
+            document.getElementById('ans').innerHTML=`Your answer is =>` +sum;
+        }
+        function division() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            sum = num1/num2;
+
+            document.getElementById('ans').innerHTML=`Your answer is =>` +sum;
+        }
+    </script>
+</body>
+</html>

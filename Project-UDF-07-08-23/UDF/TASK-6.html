@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to input angles of a triangle and check whether triangle is valid or not-(using no return with
+        parameter function)</title>
+</head>
+<body>
+    <center>
+        <h3 id="ans"></h3>
+    </center>
+
+    <script>
+        function Check(a,b,c) {
+
+            let sum = a+b+c;
+
+            if(sum === 180){
+                alert('This is an equilateral Triangle');
+            }
+            else{
+                alert('This is not an equilateral Triangle');
+            }
+        }
+        Check(60,60,60);
+    </script>
+</body>
+</html>

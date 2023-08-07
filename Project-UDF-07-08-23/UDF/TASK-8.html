@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a javascript Program to perform a swapping of two variables.(all function use)</title>
+</head>
+<body>
+    <center>
+        <h2>swapping of two variables</h2>
+        <label for="text">Enter A:</label>
+        <input type="number" id="num1" placeholder="Enter Here" />
+        <br><br>
+
+        <label for="text">Enter B :</label>
+        <input type="number" id="num2" placeholder="Enter Here" />
+        <br><br>
+
+        <button onclick="swapping()">Click For swapping</button>
+
+        <h3 id="ans"></h3>
+    </center>
+
+    <script>
+        function swapping() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            sum = num1+num2;
+
+            num1=sum-num1;
+            num2=sum-num2;
+
+            document.getElementById('ans').innerHTML=`Your swapping value is A=>` +num1+`B=>`+num2;
+        }
+    </script>
+</body>
+</html>

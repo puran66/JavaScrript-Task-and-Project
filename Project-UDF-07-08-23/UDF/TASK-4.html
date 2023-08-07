@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to find which number is greter in 4 numbers using ledder if else. (using no return with parameter function)</title>
+</head>
+<body>
+    <center>
+        <h3 id="ans"></h3>
+    </center>
+
+    <script>
+        function Check(a,b,c,d) {
+
+            if(a>b && a>c && a>d){
+                document.getElementById("ans").innerHTML=`The Greatest Number is`+ a;
+            }
+            else if(b>a && b>c && b>d){
+                document.getElementById("ans").innerHTML=`The Greatest Number is`+ b;
+            }
+            else if(c>a && c>b && c>d){
+                document.getElementById("ans").innerHTML=`The Greatest Number is`+ c;
+            }
+            else{
+                document.getElementById("ans").innerHTML=`The Greatest Number is`+ d;
+            }
+            
+        }
+        
+        Check(23,32,12,33);
+    </script>
+</body>
+</html>
