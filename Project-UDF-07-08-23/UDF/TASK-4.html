@@ -7,28 +7,56 @@
 </head>
 <body>
     <center>
+        <h2>find which number is greter in 4?</h2>
+        <label for="text">Enter First Number :</label>
+        <input type="number" id="num1" placeholder="Enter Here" />
+        <br><br>
+
+        <label for="text">Enter Second Number :</label>
+        <input type="number" id="num2" placeholder="Enter Here" />
+        <br><br>
+
+        <label for="text">Enter Third Number :</label>
+        <input type="number" id="num3" placeholder="Enter Here" />
+        <br><br>
+
+        <label for="text">Enter Fourth Number :</label>
+        <input type="number" id="num4" placeholder="Enter Here" />
+        <br><br>
+
+        <button onclick="ans()">Click Here!</button>
         <h3 id="ans"></h3>
     </center>
 
     <script>
+
         function Check(a,b,c,d) {
 
             if(a>b && a>c && a>d){
-                document.getElementById("ans").innerHTML=`The Greatest Number is`+ a;
+                document.getElementById("ans").innerHTML=`The Greatest Number is `+ a;
             }
             else if(b>a && b>c && b>d){
-                document.getElementById("ans").innerHTML=`The Greatest Number is`+ b;
+                document.getElementById("ans").innerHTML=`The Greatest Number is `+ b;
             }
             else if(c>a && c>b && c>d){
-                document.getElementById("ans").innerHTML=`The Greatest Number is`+ c;
+                document.getElementById("ans").innerHTML=`The Greatest Number is `+ c;
             }
             else{
-                document.getElementById("ans").innerHTML=`The Greatest Number is`+ d;
+                document.getElementById("ans").innerHTML=`The Greatest Number is `+ d;
             }
             
         }
         
-        Check(23,32,12,33);
+        function ans(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var num3 = document.getElementById("num3").value;
+            var num4 = document.getElementById("num4").value;
+
+            Check(num1,num2,num3,num4);
+        }
+        
+        
     </script>
 </body>
 </html>
