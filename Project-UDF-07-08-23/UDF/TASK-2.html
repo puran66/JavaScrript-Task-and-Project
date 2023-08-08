@@ -6,9 +6,13 @@
     <title>Write a JavaScript program to check number positive and negetive? (using no return with parameter)</title>
 </head>
 <body>
-    <div>
-        <h2 id="ans"></h2>
-    </div>
+    <center>
+        <h2>check number positive and negetive?</h2>
+        <label for="text">Enter Your Number :</label>
+        <input type="number" id="num" placeholder="Enter Here"/>
+        <button onclick="ans()">Click Here!</button>
+        <h3 id="ans"></h3>
+    </center>
 
     <script>
         function Check(a){
@@ -19,7 +23,11 @@
                     document.getElementById("ans").innerHTML = "Negetive";
                 }
         }
-        Check(-12);
+        function ans(){
+            let num = document.getElementById("num").value;
+
+            Check(num);
+        }
     </script>
 </body>
 </html>
