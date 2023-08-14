@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a javascript program to Get the Fibonacci series up to n terms</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter value here !"));
+        let Fibonacci =0;
+        let FirstNumber=0;
+        let SecondNumber=1;
+
+        
+        for(let i=1;i<=n;i++){
+            Fibonacci=FirstNumber+SecondNumber;
+            document.write(Fibonacci+"</br>");
+            FirstNumber = SecondNumber;
+            SecondNumber = Fibonacci;
+        }
+    </script>
+</body>
+</html>

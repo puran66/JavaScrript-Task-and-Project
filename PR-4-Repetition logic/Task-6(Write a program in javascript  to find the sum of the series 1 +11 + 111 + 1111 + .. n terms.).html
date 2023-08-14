@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a program in javascript  to find the sum of the series 1 +11 + 111 + 1111 + .. n terms.</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt("Enter N Number of the sum of the series !(1 +11 + 111 + 1111 )"));
+        let num=1;
+        let sum=0;
+
+        for(let i=1;i<=n;i++){
+            sum+=num;
+            num=num*10+1;
+        }
+        document.write("the sum of the series 1 +11 + 111 + 1111 + .. n is =>"+sum);
+    </script>
+</body>
+</html>

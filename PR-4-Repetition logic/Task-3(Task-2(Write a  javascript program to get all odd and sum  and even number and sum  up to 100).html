@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a  javascript program to get all odd and sum  and even number and sum  up to 100</title>
+</head>
+<body>
+    <script>
+        let n =100;
+        EvenNumberSum=0;
+        OddNumberSum=0;
+        for(let i=1;i<=n;i++){
+            if(i%2==0){
+                document.write("Even Number =>",i+"</br>");
+                EvenNumberSum+=i;
+            }
+            else{
+                document.write("Odd Number =>",i+"</br>");
+                OddNumberSum+=i; 
+            }
+        }
+        document.write(`The Sum of the Even Numbers is ${EvenNumberSum}`+"</br>");
+        document.write(`The Sum of the Odd Numbers is ${OddNumberSum}`);
+    </script>
+</body>
+</html>
