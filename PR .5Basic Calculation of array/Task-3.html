@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Employee List whose age is greater then 30 </title>
+</head>
+<body>
+    <script>
+        let Employee = [
+            {name: "Raj",age:"25"},
+            {name: "Krishna",age:"28"},
+            {name: "Yogesh",age:"31"},
+            {name: "Shyam",age:"34"},
+            {name: "Piyush",age:"44"}
+        ]
+
+        let OldEmployee= Employee.filter(Employee => Employee.age>30);
+
+        for(let data of OldEmployee){
+            document.write(`Name : ${data.name} &nbsp&nbsp Age => ${data.age} </br>`)
+        }
+    </script>
+</body>
+</html>

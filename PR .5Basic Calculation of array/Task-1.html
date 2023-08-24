@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display all employee List Above 50000 RS in Some Object Value</title>
+</head>
+
+<body>
+    <script>
+        let employee = [{ name: "krishna", salary: 95000 },
+        { name: "Jaydeep" , salary: 80000 },
+        { name: "Priyal", salary: 70000 },
+        { name: "Sujeet", salary: 45000 },
+        { name: "Puran", salary: 40000 }]
+
+        let highPaidEmployee = employee.filter(employee =>employee.salary>50000);
+
+        for(let data of highPaidEmployee){
+            document.write("name:   "+data.name+"   salary :"+data.salary +"<br>");
+        }
+    </script>
+</body>
+
+</html>

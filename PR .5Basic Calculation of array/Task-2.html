@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display only Female Employee List in object</title>
+</head>
+<body>
+    <script>
+        let emp =[ 
+            {name: "John",Gender:"Male"},
+            {name: "Yash",Gender:"Male"},
+            {name: "Monika",Gender:"Female"},
+            {name: "Ruchi",Gender:"Female"},
+            {name: "Neetu",Gender:"Female"}
+        ]
+
+        let FemaleEmployee= emp.filter(emp => emp.Gender=="Female");
+
+        for(let data of FemaleEmployee){
+            document.write(`Name :&nbsp ${data.name} &nbsp&nbsp Gender : &nbsp ${data.Gender} </br>`);
+        }
+    </script>
+</body>
+</html>
