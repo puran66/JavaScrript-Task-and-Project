@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local Storage</title>
+</head>
+<body>
+    <script>
+        let Names = {
+            Name1: "Puran",
+            Name2: "Krishna",
+            Name3: "Sujeet",
+            Name4: "Pavan",
+            Name5: "Priyal"
+        };
+        let Id = {
+            Id1: "123",
+            Id2: "435",
+            Id3: "364",
+            Id4: "234",
+            Id5: "764"
+        };
+
+        localStorage.setItem("user",JSON.stringify(Names));
+        localStorage.setItem("key",JSON.stringify(Id));
+
+        let Result = localStorage.getItem(Names);
+        let Result1 = localStorage.getItem(Id);
+
+        console.log(Names);
+        console.log(Id);
+
+    </script>
+</body>
+</html>
