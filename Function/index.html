@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        let fun= (a,b)=>{
+
+            return a*b
+        }
+
+        let total = fun(12,13)
+
+        /* Normal Funtion */
+
+        function money (){
+            console.log("Your Money is Safe ")
+        };
+        
+        money();
+
+        /* Self Invofe Funtion */
+
+        (function hello(){
+            console.log("I'm Self Invofe Function");
+        })();
+
+        /* Return Function  */
+
+        function My(){
+            return console.log("My Name is Puran")
+        }
+        My();
+
+        /* Parameter Function  */
+
+        function Math1(a,b){
+            return a+b
+        }
+        console.log(Math1(12,14))
+
+    </script>
+</body>
+</html>
