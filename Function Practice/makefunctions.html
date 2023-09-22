@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function hello(){
+        //     return new Promise((resolve)=>{
+        //         setTimeout(()=>{
+        //             resolve("I'm promise");   
+        //         },3000)
+        //     })
+        // }
+
+
+        // async function Call(){
+        //         console.log("Working...");
+        //         let say = await hello();
+        //         console.log(say);
+        //         console.log("Done..") 
+        // }
+        
+        // hello().then((value)=>{
+        //             console.log(value);
+        //         })
+
+        // Call()
+
+
+
+        // function Fruits(){
+        //     return new Promise((resolve)=>{
+        //         setInterval(() => {
+        //             resolve("I'm SetInterval Promise");
+        //         }, 5000);
+        //     })
+        // }
+
+
+
+        // async function Call1(){
+        //     console.log("I'm finding..");
+        //     let say1 = await Fruits();
+        //     console.log(say1);
+        // }
+
+        // Call1();
+
+
+
+        // function School (){
+        //     return new Promise((reslove)=>{
+        //         reslove("I'm School");
+        //     },5000)
+        // };
+
+        // async function Call2(){
+        //     console.log("Calling School...");
+        //     const school =await School();
+        //     console.log(school);
+        // }
+
+        // Call2();
+
+
+        // function Hostle(){
+        //     return new Promise((reslove)=>{
+        //         setTimeout(()=>{
+        //             reslove('Hello Boys');
+        //         })
+        //     })
+        // }
+
+        // async function Call3(){
+        //     console.log("calling hostel...");
+        //     const hostel = await Hostle();
+        //     console.log(hostel);
+        // }
+
+        // Call3();
+
+        // function Classes(){
+        //         return new Promise((reslove)=>{
+        //             setInterval(()=>{
+        //                 reslove("I Have student's");
+        //             },3000)
+        //         })
+        // };
+
+        // async function Call4(){
+        //     console.log("Calling classes....");
+        //     const classes = await Classes();
+        //     console.log(classes);
+        // };
+
+        // Call4();
+
+
+        function Hacker (){
+            return new Promise ((resolve,reject)=> {
+                resolve("I'm hacking your pc....")
+            })
+        }
+
+        async function Call5(){
+            let result = await Hacker();
+            console.log(result)
+        }
+
+
+    </script>
+</body>
+</html>

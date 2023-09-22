@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function My (){
+            return new Promise((resolve,reject)=>{
+                setInterval(() => {
+                    resolve("hello....")
+                }, 3000);
+            })
+        }
+
+        async function Call(){
+            let data = await My();    
+        }
+
+        Call()
+    </script>
+</body>
+</html>
