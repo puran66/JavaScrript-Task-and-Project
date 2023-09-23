@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <label for="Name">Name :</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <label for="id">Id :</label>
+        <input type="id" id="number">
+        <br><br>
+        <input type="submit" onclick="storageSave()">
+    </center>
+</body>
+<script>
+    function storageSave(){
+        let Name = document.getElementById("name").value;  //get value of input field with ID "name".
+        let Number = document.getElementById("number").value;
+
+        sessionStorage.setItem('name',Name);
+        sessionStorage.setItem('num',Number);
+    };
+
+
+</script>
+
+</html>
