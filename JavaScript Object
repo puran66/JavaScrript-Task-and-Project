@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Array Accessor //
 
+    let Object =  { name: "John", sex: "Male", address: "123 Main Street" };
+
+    console.log(`${Object.Name} your Address is ${Object.address});
+
+    const arrayOfObject = [
+        { name: "John", sex: "Male", address: "123 Main Street" },
+        { name: "Alice", sex: "Female", address: "456 Elm Street" },
+        { name: "Bob", sex: "Male", address: "789 Oak Street" },
+        { name: "Eve", sex: "Female", address: "101 Pine Street" },
+        { name: "Mike", sex: "Male", address: "555 Maple Avenue" },
+        { name: "Sarah", sex: "Female", address: "777 Cedar Lane" },
+    ];
+
+    // Array OF Object Accessor //
+
+    console.log(arrayOfObject[1].name);
+</script>
+</html>
