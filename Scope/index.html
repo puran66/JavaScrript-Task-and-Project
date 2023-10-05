@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let globalScope = "you can anywhere";
+    console.log(globalScope);
+
+    function functionScope(){
+        let FuctionScope = "You can only use me inside function";
+        console.log(FuctionScope);
+    }
+
+    functionScope();
+    // console.log(FuctionScope);  can't acess outside of function;
+</script>
+</html>
