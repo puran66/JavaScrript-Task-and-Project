@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+</head>
+<body>
+    <div id="color-box" style="width: 100vw; height: 100vh;">
+        <button onclick="Generator()">Click Here</button>
+    </div>
+    <script>
+        let intervalId; // To store the interval ID
+
+        function Generator() {// Clear previous interval
+            intervalId = setInterval(() => {
+                let Result = "";
+                for (let i = 0; i < 6; i++) {
+                    Result += Math.floor(Math.random() * 10);
+                }
+                document.getElementById("color-box").style.backgroundColor = "#" + Result;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
