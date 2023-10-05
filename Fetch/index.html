@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="h3"></h3>
+    <button width="599px" height="400px" onclick="DataCalling()"><Canvas>Click Here to Generate Data</Canvas></button>
+</body>
+<script>
+    async function DataCalling(){
+        console.log("Your Data Is Getting....")
+        const Res = await fetch("https://mocki.io/v1/ef03d3c7-32fa-4c5e-9938-1f581c7a0177");
+        const Data = await Res.json()
+        console.log(Data)
+
+        for (let index = 0; index < Data.length; index++) {
+            let result = Data[index]
+            document.getElementById('h3').innerHTML = result.fullName+" "+result.country+" "+result.photoLink
+
+        }
+    }
+</script>
+</html>
