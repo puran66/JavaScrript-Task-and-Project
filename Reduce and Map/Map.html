@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="View()">Click Here 1</button>
+    <button onclick="Show()">Click Here 2</button>\
+    <button onclick="Multifaction()">Click Here 3</button>
+    <button onclick="Divide()">Click Here 4</button>
+    <button onclick="Modulus()">Click Here 5</button>
+
+    <br>
+    <br>
+
+    <button onclick="PreDecrement()">Click Here 6</button>
+    &nbsp;&nbsp;
+    <button onclick="PostDecrement()">Click Here 7</button>
+    &nbsp;&nbsp;
+    <button onclick="PreIncrement()">Clik Here 8</button>
+    &nbsp;&nbsp;
+    <button onclick="PostIncrement()">Click Here 9</button>
+    &nbsp;&nbsp;
+    <button onclick="MultipleArithmetic()">Click Here 10</button>
+</body>
+<script>
+    View=()=>{
+        const arr = [1,2,3,4,5,6,7];
+
+        const Result = arr.map(x => ++x );
+
+        console.log(Result);
+    };
+
+    Show =()=>{
+        const arr = [ 12,34,23,12,43,32,43,67,23,43,54];
+
+        const Result = arr.map(x => --x);
+
+        console.log(Result);
+    };
+
+    Multifaction=()=>{
+        const arr=[1,3,5,,7,9,11];
+
+        const Result = arr.map(x => x *2);
+
+        console.log(Result);
+    };
+
+    Divide =()=>{
+        const arr =[2,4,6,8,10,12,18];
+
+        const Result = arr.map(x => x/2);
+
+        console.log(Result);
+    };
+
+    Modulus =()=>{
+        const arr = [10,20,30,40,50,60,70,80,90,100];
+
+        const Result = arr.map(x => x%2);
+
+        console.log(Result);
+    }
+
+
+    // Multiple Line Arrow Function //
+
+    PreDecrement =()=>{
+        const arr= [1 ,2,  3,4,5,6,7,8,9,10 ];
+
+        const Result = arr.map(x=>{
+            console.log(x);
+            return --x;
+        });
+
+        console.log(Result);
+    };
+
+    PostDecrement =()=>{
+        const arr= [1 ,2,  3,4,5,6,7,8,9,10 ];
+
+        const Result = arr.map(x=>{
+            console.log(x);
+            return x--;
+        });
+
+        console.log(Result);
+    };
+
+    PreIncrement =()=>{
+        const arr= [1 ,2,  3,4,5,6,7,8,9,10 ];
+
+        const Result = arr.map(x=>{
+            console.log(x);
+            return ++x;
+        });
+
+        console.log(Result);
+    };
+
+    PostIncrement =()=>{
+        const arr= [1 ,2,  3,4,5,6,7,8,9,10 ];
+
+        const Result = arr.map(x=>{
+            console.log(x);
+            return x++;
+        });
+
+        console.log(Result);
+    };
+
+    MultipleArithmetic =()=>{
+        const arr = [1,2,3,4,5,6,7,8,9,10];
+
+        const Result = arr.map(x=>{
+            return x*4/2+2-1
+        });
+
+        console.log(Result);
+    }
+</script>
+</html>
