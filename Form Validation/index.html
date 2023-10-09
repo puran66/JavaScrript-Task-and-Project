@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<style>
+    .form{
+        width: 400px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Deatails{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .btn{margin-left: 70px;
+        width: 130px;
+        height: 30px
+    }
+</style>
+<body>
+    <div class="form">
+        <center>
+            <h1>Form Validation</h1>
+        </center>
+        <div class="Deatails">
+            <label for="FullName">Full Name : <input type="text" id="FullName" required></label>
+            <label for="Address"> Address :   <input type="text" id="Address" required></label>
+            <label for="Age">Age : <input type="number" id="Age" required></label>
+            <label for="Job">Job : <input type="text" id="Job" required></label>
+            <label for="Phone No">Phone : <input type="tel" id="Phone" required></label>
+            <label for="Country">Country : <select name="Country" id="Country" id="Country" required>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="New Zealand ">New Zealand </option>
+            </select>
+        </label>
+        <input type="button" value="Click To Submit" class="btn" id="Sumbit">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
