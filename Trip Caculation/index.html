@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Calculation</title>
+    <link rel="stylesheet" href="styel.css">
+</head>
+<body>
+    <div class="form-1">
+        <Center>
+            <h1>Travel Costs Calculator</h1>
+        </Center>
+        <div class="Deatails">
+            <label for="Distance">Distance : <input type="number" id="Distance">&nbsp; km</label>
+            <label for="Milage">Milage : <input type="text" id="Milage">&nbsp; milage</label>
+            <label for="Feul-Price">Fuel Price : <input type="text" id="FeulPrice">&nbsp; rs</label>
+            <label for="Persons">Persons : <input type="number" id="Persons"></label>
+            <label for="Hotel">Hotel-Cost : <input type="text" id="HotelCost">&nbsp; rs</label>
+            <label for="Travle">Travel Cost : <input type="text" id="TravelCost">&nbsp; rs</label>
+
+            <button class="button-3" id="Calculate">Calculate Total</button>
+        </div>
+        <center><h1 id="Total"></h1></center>
+        <center><h1 id="perPerson"></h1></center>
+    </div>
+</body>
+<script>
+    const Calculate = document.querySelector('#Calculate');
+    const Distance = document.querySelector('#Distance');
+    const FeulPrice = document.querySelector('#FeulPrice');
+    const Milage = document.querySelector('#Milage');
+    const Persons = document.querySelector('#Persons');
+    const HotelCost = document.querySelector('#HotelCost');
+    const TravelCost = document.querySelector('#TravelCost');
+    const Total = document.querySelector('#Total');
+    const perPerson = document.querySelector('#perPerson');
+
+
+    Calculate.addEventListener('click',(e)=>{
+        
+        if(Distance.value && FeulPrice.value &&  Persons.value && HotelCost.value && TravelCost.value){
+
+            console.log(FeulPrice)
+            const Cost = (Distance.value/Milage.value)*FeulPrice.value + HotelCost.value + TravelCost.value;
+
+            const PerPerson = Cost/Persons.value;
+
+            Total.innerHTML =  `<p> Your Total Cost is ${Cost} </p>`
+
+            perPerson.innerHTML = `<p> Per Person Cost is ${PerPerson} </p>`
+
+        }
+        else{
+            alert("Please Enter All Details");
+        }
+        
+    })
+</script>
+</html>
