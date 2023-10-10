@@ -22,8 +22,8 @@
 
             <button class="button-3" id="Calculate">Calculate Total</button>
         </div>
-        <center><h1 id="Total"></h1></center>
-        <center><h1 id="perPerson"></h1></center>
+        <center><p id="Total"></p></center>
+        <center><p id="perPerson"></p></center>
     </div>
 </body>
 <script>
@@ -43,13 +43,13 @@
         if(Distance.value && FeulPrice.value &&  Persons.value && HotelCost.value && TravelCost.value){
 
             console.log(FeulPrice)
-            const Cost = (Distance.value/Milage.value)*FeulPrice.value + HotelCost.value + TravelCost.value;
+            const Cost = (parseInt(Distance.value)/parseInt(Milage.value))*parseInt(FeulPrice.value) + parseInt(HotelCost.value )+ parseInt(TravelCost.value);
 
             const PerPerson = Cost/Persons.value;
 
-            Total.innerHTML =  `<p> Your Total Cost is ${Cost} </p>`
+            Total.innerHTML =  `<p> Your Total Cost is ${Cost}rs </p>`
 
-            perPerson.innerHTML = `<p> Per Person Cost is ${PerPerson} </p>`
+            perPerson.innerHTML = `<p> Per Person Cost is ${PerPerson}rs </p>`
 
         }
         else{
