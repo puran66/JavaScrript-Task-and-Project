@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CownDown App</title>
+</head>
+<style>
+    .clock{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        color: white;
+    }
+    #btn{
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="clock">
+        <h1 id="hour">00</h1>
+        <h1>Hour</h1>
+        <h1>:</h1>
+        <h1 id="minutes">00</h1>
+        <h1>Minutes</h1>
+        <h1>:</h1>
+        <h1 id="seconds">00</h1>
+        <h1>seconds</h1>
+        
+        <button id="btn">Click To Start</button>
+    </div>
+</body>
+<script>
+    const Hour = document.querySelector("#hour");
+    const Minutes = document.querySelector("#minutes");
+    const Seconds = document.querySelector("#seconds");
+    const Button = document.querySelector("#btn");
+
+    Button.addEventListener('click', () => {
+        let second = 0;
+        let minute = 1;
+        let hour = 1;
+        setInterval(() => {
+            Seconds.textContent = second;
+            second++;
+
+            if (second == 60) {
+                second = 0;
+
+                Minutes.textContent = minute;
+                minute++;
+
+                if (minute == 60) {
+                    minute = 0;
+
+                    Hour.textContent = hour;
+                    hour++;
+                }
+            }
+        },1000)
+    })
+</script>
+
+</html>
