@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-1">
+        <h1 style=" color:#3498db; margin-bottom: 35px;">Student Details </h1>
+        <div class="Deatails">
+
+            <label for="Name">Name : <input type="text" id="Name"></label>
+            <label for="Roll-NO">Roll No : <input type="number" id="Roll"></label>
+
+            <label for="subject-1">Enter English Mark : <input type="number" id="English"></label>
+            <label for="subject-2">Enter Gujarati Mark : <input type="number" id="Gujarati"></label>
+            <label for="subject-3">Enter Math Mark : <input type="number" id="Math"></label>
+            <label for="subject-4">Enter Sceince Mark : <input type="number" id="Sceince"></label>
+
+            <button class="button-3">Click See Result</button>
+        </div>
+        <p id="P"></p>
+    </div>
+</body>
+<script>
+    const button = document.querySelector(".button-3");
+    const Name = document.querySelector("#Name");
+    const English = document.querySelector("#English");
+    const Gujarati = document.querySelector("#Gujarati");
+    const Math = document.querySelector("#Math");
+    const Sceince = document.querySelector("#Sceince");
+    const p = document.querySelector("#P");
+
+    button.addEventListener('click', () => {
+        if (Name.value && English.value && Gujarati.value && Math.value && Sceince.value) {
+            let sum = parseInt(English.value) + parseInt(Gujarati.value) + parseInt(Math.value) + parseInt(Sceince.value);
+            let percent = sum * 100 / 400;
+            console.log(sum);
+            console.log(percent);
+
+            switch (true) {
+                case percent >= 90:
+                    p.innerHTML = `Your Grade is A++ and Percentage is ${percent}`
+                    break;
+                case percent >= 80:
+                    p.innerHTML = `Your Grade is A and Percentage is ${percent}`
+                    break;
+                case percent >= 60:
+                    p.innerHTML = `Your Grade is B and Percentage is ${percent}`
+                    break;
+                case percent >= 40:
+                    p.innerHTML = `Your Grade is C and Percentage is ${percent}`
+                    break;
+                case percent >= 33:
+                    p.innerHTML = `Your Grade is D and Percentage is ${percent}`
+                    break;
+                case percent < 33:
+                    p.innerHTML = `Your Are Fail Better Luck Next Time `
+                    break;
+            }
+        } else {
+            alert("Please Fill All Deatails")
+        }
+    })
+</script>
+
+</html>
