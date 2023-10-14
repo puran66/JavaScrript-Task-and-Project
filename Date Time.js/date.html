@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date In Js</title>
+</head>
+
+<body>
+    <h1 id="Date"></h1>
+    <h1 id="Hour"></h1>
+    <h1 id="Minute"></h1>
+    <h1 id="Seconds"></h1>
+    <h1 id="MiliSeconds"></h1>
+    <h1 id="Day"></h1>
+</body>
+<script>
+    const Date1 = document.querySelector("#Date");
+    const Hour1 = document.querySelector("#Hour");
+    const Minute1 = document.querySelector("#Minute");
+    const Seconds1 = document.querySelector("#Seconds");
+    const MiliSeconds1 = document.querySelector("#MiliSeconds");
+    const Day1 = document.querySelector("#Day");
+
+    let CurrDate = new Date();
+
+    Date1.innerHTML = `Date :${CurrDate}`
+
+    Hour1.innerHTML = ` Hour :${CurrDate.getHours()}`
+
+    Minute1.innerHTML = ` Minute :${CurrDate.getMinutes()}`
+
+    Seconds1.innerHTML = `Seconds :${CurrDate.getSeconds()}`
+
+    MiliSeconds1.innerHTML = `MiliSeconds :${CurrDate.getMilliseconds()}`
+
+    let Days = CurrDate.getDay()
+    console.log(Days);
+
+    switch (Days) {
+        case 1:
+            Day1.innerHTML = "Day : Sunday"
+            break;
+
+        case 2:
+            Day1.innerHTML = "Day : Monday"
+            break;
+
+        case 3:
+            Day1.innerHTML = "Day : Tuesday"
+            break;
+
+        case 4:
+            Day1.innerHTML = "Day : Wednesday"
+            break;
+
+        case 5:
+            Day1.innerHTML = "Day : Thuesday"
+            break;
+
+        case 6:
+            Day1.innerHTML = "Day : Friday"
+            break;
+
+        case 7:
+            Day1.innerHTML = "Day : Saturday"
+            break;
+    }
+</script>
+
+</html>
