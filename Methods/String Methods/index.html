@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // split give new array with difine split //
+    const hello = "Hello Friends I'M Full Stack Developer";
+    let result = hello.split("o")
+    console.log(result);
+
+    result = hello.split("")
+    console.log(result);
+
+    result = hello.split(" ")
+    console.log(result);
+
+    // indexOf //
+
+    const Hello1 = "My Name Is Puran Vishwakarma"
+
+    const result1 = Hello1.indexOf("Is");
+
+    console.log(result1);
+
+    // toUpperCase and toLowerCase  //
+
+    const school = "gyanjyot vidhyalay"
+
+    console.log(school.toUpperCase());
+
+    const Name = "PURAN VISHWAKARMA "
+
+    console.log(Name.toLowerCase());
+
+    // replace //
+
+    const crush = "Avneet kour"
+
+    console.log(crush.replace("Avneet","Idk"));
+
+    // trim  remove white space //
+
+    const whiteSpace = "      hello freinds    "
+
+    console.log(whiteSpace.trim());
+
+    // concat // 
+
+    const Concat = "hello"
+
+    console.log(Concat.concat(Name));
+
+    // startsWith Give boolean values if start with diefine value and index and endsWith  //
+
+    const Say = "African LoveBirds Are Loveble"
+
+    console.log(Say.startsWith('A',0));
+    console.log(Say.startsWith('C',0));
+
+    console.log(Say.endsWith('e'));
+    console.log(Say.endsWith('p'));
+
+    // slice Not add the ending index..//
+
+    const Bird = "LoveBirds"
+
+    console.log(Bird.slice(4,8));
+
+    // substring  Not add the ending index..//
+
+    const animal = "cow lion zebra"
+
+    console.log(animal.substring(4,8));
+
+    // charAt   To access the character at a specific index in a string //
+
+    const fruits = "apple orange pineapple banana"
+
+    console.log(fruits.charAt(7));
+</script>
+
+</html
