@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <h1 id="Title">Color Generator</h1>
+    </center>
+    <center>
+        <div id="color-box" style="width: 100vw; height: 100vh;">
+            <button onclick="Generator()" class="button-3" id="startButton">START</button>
+            <button onclick="STOP()" class="button-3">STOP</button>
+        </div>
+    </center>
+    <script>
+        let Title = document.querySelector("#Title");
+        let intervalId; 
+        let intervalId1;// To store the interval ID
+
+        function Generator() {// Clear previous interval
+            clearInterval(intervalId1);
+            if (true) {
+                intervalId = setInterval(() => {
+                    let Result = "";
+                    for (let i = 0; i < 6; i++) {
+                        Result += Math.floor(Math.random() * 10);
+                    }
+                    document.querySelector("body").style.backgroundColor = "#" + Result;
+                }, 2000);
+                document.getElementById("startButton").disabled = true;
+            }
+            else {
+                alert("Do Not Click More Then One..")
+            }
+        }
+
+        function STOP(){
+            clearInterval(intervalId);
+            document.querySelector("body").style.backgroundColor = "white";
+            document.getElementById("startButton").disabled = false;
+        }
+
+        (function SelfInvoke(){
+            //            console.log('Self Invoked');
+            intervalId1 = setInterval(() => {
+                    let Result = "";
+                    for (let i = 0; i < 6; i++) {
+                        Result += Math.floor(Math.random() * 10);
+                    }
+                    document.querySelector("body").style.backgroundColor = "#" + Result;
+                }, 2000);
+        })()
+    </script>
+</body>
+
+</html>
