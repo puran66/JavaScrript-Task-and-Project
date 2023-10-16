@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-1">
+        <h1 style=" color:#3498db; margin-bottom: 35px;">Event Cost Manager </h1>
+        <div class="Deatails">
+
+            <label for="Name">Event Name : <input type="text" id="EventName"></label>
+
+            <label for="EventMembers-1">Event Members : <input type="number" id="EventMembers"></label>
+            <label for="DishPrice">Per Dish Price : <input type="number" id="DishPrice"></label>
+            <label for="Discount">Discount(%): <input type="number" id="Discount"></label>
+
+            <button class="button-3" id="btn">Click Here</button>
+        </div>
+        <p id="result"></p>
+    </div>
+</body>
+<script>
+    const EventName = document.querySelector("#EventName");
+    const EventMembers = document.querySelector("#EventMembers");
+    const DishPrice = document.querySelector("#DishPrice");
+    const Discount = document.querySelector("#Discount");
+    const P = document.querySelector("#result");
+    const btn = document.querySelector("#btn");
+
+    btn.addEventListener('click', () => {
+        if (EventName.value && EventMembers.value && DishPrice.value && Discount.value) {
+            let Price = parseInt(EventMembers.value) * parseInt(DishPrice.value);
+            let DiscountPrice = Price/parseInt(Discount.value);
+            let FinalPrice = Price - DiscountPrice;
+            console.log(Price);
+            console.log(DiscountPrice);
+            console.log(FinalPrice);
+
+            P.textContent = `Your Total Cost Is ${FinalPrice}`
+        } else {
+            alert("Please Fill All Deatails")
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location and Online Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn">
+            <button class="button-3">Click To Get Location</button>
+            <h1 id="Status"></h1>
+            <h1 id="Location"></h1>
+        </div>
+    </div>
+</body>
+<script>
+    const btn = document.querySelector('button');
+    const Online = window.navigator.onLine;
+    const container = document.querySelector(".container");
+    const Status = document.querySelector("#Status")
+    const H1 = document.querySelector("#Location")
+
+    if (Online) {
+        container.style.backgroundColor = "green";
+        Status.textContent = ` Status : You Are Online`
+
+    } else {
+        container.style.backgroundColor = "red";
+        console.log("Ofline");
+        Status.textContent = `Status : You Are Offline`
+    }
+    
+    btn.addEventListener('click',()=>{
+        // console.log("click");
+        let position;
+        navigator.geolocation.getCurrentPosition((position)=>{
+            H1.textContent = `Location =>Latitude : ${position.coords.latitude} , Longitude : ${position.coords.longitude}`
+        })
+    })
+    
+
+</script>
+
+</html>
