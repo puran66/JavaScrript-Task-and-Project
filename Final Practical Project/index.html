@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <style>
+        .text {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .Details {
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        button {
+            width: 200PX;
+            height: 30Px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body id="color">
+    <div id="text">
+        <div id="data"></div>
+        <button onclick="Get()">ADD DATA</button>
+        <button onclick="remove()">REMOVE DATA</button>
+    </div>
+</body>
+<script>
+    let pass = 0;
+    let Conatiner = document.querySelector("#data");
+    let text;
+
+    //****************DATA Fetch **************//
+    async function Data() {
+        if (pass == 0) {
+            pass++;
+
+            let res = await fetch("https://jsonplaceholder.typicode.com/users");
+            let Data = await res.json();
+            // console.log(Data[0]);
+
+            localStorage.setItem("details", JSON.stringify(Data));
+
+            let value = JSON.parse(localStorage.getItem("details"))
+
+            console.log(value);
+
+            text = value;
+        }
+    }
+
+    //****************Get Data **************//
+    async function Get() {
+        await Data();
+        console.log(text);
+        console.log(pass);
+
+        for (let i = 0; i < 10; i++) {
+            let div = document.createElement("div");
+            div.className = "Details";
+            Conatiner.appendChild(div);
+            div.textContent = JSON.stringify(text[i]);
+        }
+
+    }
+
+    //****************DATA Remove **************//
+    function remove() {
+        if (pass == 1) {
+            console.log("remove");
+            localStorage.removeItem("details");
+
+            Conatiner.innerHTML = ""
+        }
+    }
+
+
+    // ******************   Color Generator ******************************//
+
+    let color = document.getElementById("color");
+
+    setInterval(function Generator() {
+        let randomNumber = "";
+        for (let i = 0; i < 6; i++) {
+            randomNumber += Math.floor(Math.random() * 10);
+        }
+        console.log(randomNumber);
+
+        color.style.backgroundColor = "#" + randomNumber
+    }, 10000);
+
+</script>
+
+</html>
